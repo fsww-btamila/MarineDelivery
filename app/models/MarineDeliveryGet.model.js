@@ -11,13 +11,15 @@ getServices.getVehicles = async (req, result) => {
 
     try {
         const request = poolConn.request();
+        console.log("request", request)
         console.log("queyrParam", req)
         let companyID = req.CompanyID;
         let customerID = req.CustomerID;
         let queryStr = "exec MN_GetVehicle '" + companyID + "','" + customerID + "'";
         console.log(queryStr);
         return result = await request.query(queryStr);
-    } catch (err) {
+    } 
+    catch (err) {
         console.error('SQL error', err);
     }
 };

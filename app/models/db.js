@@ -1,13 +1,15 @@
 const dbConfig = require('../config/db.config');
 
 const config = {
-  server: dbConfig.HOST,
+  server: dbConfig.HOST, // DESKTOP-VVN4PRG\\SQLEXPRESS
   user: dbConfig.USER,
   password: dbConfig.PASSWORD,
   database: dbConfig.DATABASE,
+  port: dbConfig.PORT,
   "options": {
-    "encrypt": false,
-    "enableArithAbort": true
+    "encrypt": true,
+    "enableArithAbort": true,
+    "synchronize": true,
     },
     pool: {
       max: 10,

@@ -19,7 +19,7 @@ app.use(function(req, res, next) {
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to MDA CURD Operations." });
+  res.json({ message: "Welcome to MarineDelivery Production CURD Operations." });
 });
 
 require("./app/routes/marinedelivery.routes.js")(app);
